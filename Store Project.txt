@@ -1,0 +1,426 @@
+======Grocery class======
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.store;
+
+/**
+ *
+ * @author Daivat Pandya
+ */
+public class Grocery {
+    
+    private int id;
+    private float price;
+
+    public Grocery(int id, float price) {
+        this.id = id;
+        this.price = price;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public float getPrice() {
+        return price;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Grocery{" + "id=" + id + ", price=" + price + '}';
+    }
+    
+}
+
+======Chips class======
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.store;
+
+/**
+ *
+ * @author Daivat Pandya
+ */
+public class Chips extends Grocery {
+    
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Chips(String name, int id, float price) {
+        super(id, price);
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Chips{" + "name=" + name + '}';
+    }
+    
+}
+
+======Drink class======
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.store;
+
+/**
+ *
+ * @author Daivat Pandya
+ */
+public class Drink extends Grocery{
+    
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Drink(String name, int id, float price) {
+        super(id, price);
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Drink{" + "name=" + name + '}';
+    }
+    
+}
+
+======Shelf class======
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.store;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author Daivat Pandya
+ */
+public class Shelf {
+    
+    private int id;
+    private ArrayList<Grocery> grocList;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public ArrayList<Grocery> getGrocList() {
+        return grocList;
+    }
+
+    public void setGrocList(ArrayList<Grocery> grocList) {
+        this.grocList = grocList;
+    }
+
+    public Shelf(int id, ArrayList<Grocery> grocList) {
+        this.id = id;
+        this.grocList = grocList;
+    }
+
+    @Override
+    public String toString() {
+        return "Shelf{" + "id=" + id + ", grocList=" + grocList + '}';
+    }
+    
+}
+
+======Employee class======
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.store;
+
+/**
+ *
+ * @author Daivat Pandya
+ */
+public class Employee {
+    
+    private int id;
+    private String name;
+    private String email;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Employee(int id, String name, String email) {
+        this.id = id;
+        this.name = name;
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" + "id=" + id + ", name=" + name + ", email=" + email + '}';
+    }
+    
+}
+
+======Cashier class======
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.store;
+
+/**
+ *
+ * @author Daivat Pandya
+ */
+public class Cashier extends Employee {
+    
+    private float salary;
+    private int hours;
+
+    public float getSalary() {
+        return salary;
+    }
+
+    public void setSalary(float salary) {
+        this.salary = salary;
+    }
+
+    public int getHours() {
+        return hours;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
+    public Cashier(float salary, int hours, int id, String name, String email) {
+        super(id, name, email);
+        this.salary = salary;
+        this.hours = hours;
+    }
+
+    @Override
+    public String toString() {
+        return "Cashier{" + "salary=" + salary + ", hours=" + hours + '}';
+    }
+    
+}
+
+======Cleaner class======
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.store;
+
+/**
+ *
+ * @author Daivat Pandya
+ */
+public class Cleaner extends Employee {
+    
+    private float salary;
+    private int hours;
+
+    public float getSalary() {
+        return salary;
+    }
+
+    public void setSalary(float salary) {
+        this.salary = salary;
+    }
+
+    public int getHours() {
+        return hours;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
+    public Cleaner(float salary, int hours, int id, String name, String email) {
+        super(id, name, email);
+        this.salary = salary;
+        this.hours = hours;
+    }
+
+    @Override
+    public String toString() {
+        return "Cleaner{" + "salary=" + salary + ", hours=" + hours + '}';
+    }
+    
+}
+
+======Store class======
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.store;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author Daivat Pandya
+ */
+public class Store {
+    
+    private String name;
+    private String address;
+    private ArrayList<Shelf> shelves;
+    private ArrayList<Employee> empList;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public ArrayList<Shelf> getShelves() {
+        return shelves;
+    }
+
+    public void setShelves(ArrayList<Shelf> shelves) {
+        this.shelves = shelves;
+    }
+
+    public ArrayList<Employee> getEmpList() {
+        return empList;
+    }
+
+    public void setEmpList(ArrayList<Employee> empList) {
+        this.empList = empList;
+    }
+
+    public Store(String name, String address, ArrayList<Shelf> shelves, ArrayList<Employee> empList) {
+        this.name = name;
+        this.address = address;
+        this.shelves = shelves;
+        this.empList = empList;
+    }
+
+    @Override
+    public String toString() {
+        return "Store{" + "name=" + name + ", address=" + address + ", shelves=" + shelves + ", empList=" + empList + '}';
+    }
+    
+}
+
+======Driver class======
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package com.mycompany.store;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author Daivat Pandya
+ */
+public class DriverStore {
+    public static void main(String args[]) {
+        Cashier cashier = new Cashier(15.5f, 30, 4212, "Jackson", "jackson@abc.com");
+        Cleaner cleaner = new Cleaner(8.2f, 60, 4210, "Maria", "maria@abc.com");
+        
+        ArrayList<Employee> empList = new ArrayList<>();
+        empList.add(cashier);
+        empList.add(cleaner);
+        
+        Chips chips = new Chips("Cheetos", 4120, 1.49f);
+        Drink drink1 = new Drink("Pepsi", 2104, 1.89f);
+        Drink drink2 = new Drink("Gatorade", 2504, 1.99f);
+        
+        ArrayList<Grocery> grocList1 = new ArrayList<>();
+        grocList1.add(chips);
+        grocList1.add(drink1);
+        
+        Shelf shelf1 = new Shelf(3, grocList1);
+        
+        ArrayList<Grocery> grocList2 = new ArrayList<>();
+        grocList2.add(drink2);
+        
+        Shelf shelf2 = new Shelf(4, grocList2);
+        
+        ArrayList<Shelf> shelves = new ArrayList<>();
+        shelves.add(shelf1);
+        shelves.add(shelf2);
+        
+        Store store = new Store("Neighborhood Mart", "1234 W Broadway Ave", shelves, empList);
+        System.out.println("Store info : " + store);
+        
+    }  
+}
+
